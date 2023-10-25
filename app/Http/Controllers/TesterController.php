@@ -73,6 +73,7 @@ class TesterController extends Controller
      */
     public function destroy(Tester $tester)
     {
-        //
+        $tester->delete();
+        return redirect()->back()->with('success', 'Tester deleted successfully');
     }
 }
